@@ -1,0 +1,760 @@
+* {
+    box-sizing: border-box;
+  }
+  
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+:root {
+  color-scheme: light dark; /* both supported */
+}
+  html, body, header, nav, main, div, p, h1, h2, h3, h4, h5, h6, ul, li, ol, footer{
+      border: 0;
+      padding: 0;
+      margin: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  h1 {
+    font-size: 2.5em; /* 40px/16=2.5em */
+  }
+
+  h2 {
+    font-size: 1.875em; /* 30px/16=1.875em */
+    color: blue;
+  }
+  
+  p {
+    font-size: 0.875em; /* 14px/16=0.875em */
+  }
+  body{
+     overflow-x: hidden;
+     margin: 0px 5px 0px 5px;
+     max-width: 100%;
+}
+
+  header{
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items:center;
+      color: blue;
+  }
+  .logo{
+      float: right;
+      max-width: 30%;
+      height: auto;
+  }
+
+  /*This is the start of the navigation bar*/
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  margin-bottom: 2.5rem;
+  
+}
+
+#navlogo {
+  float:right;
+  margin: 0;
+  width: auto;
+  height: 10px;
+  bottom: 5%;
+  
+}
+
+li {
+  float: left;
+  margin: 0;
+}
+
+li a {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  
+}
+li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4db8ff;
+  }
+  /* This is the style of the banner*/
+  
+  /* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /* Caption text */
+  main .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  main .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  main .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  main .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  main .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+
+  /*This is the Style of the content text*/
+  .content{
+  font-size: 30px;
+  padding: 1em;
+  overflow: hidden;
+}
+
+.indexbtn {
+  border: none;
+  outline: 0;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 94%;
+}
+
+.indexbtn:hover {
+  background-color: #555;
+}
+
+  /* Message section Style*/
+  #team{
+    text-align: center;
+    color: #51c7eb;
+  }
+  .message {
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+    margin: 20px 0px 0px 0px;
+    overflow-y: hidden;
+    margin-bottom: 2.5rem;
+  }
+
+  .content1, .content2 {
+    background-color: #51c7eb; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 22%;
+	  margin: 11% 0px 0px 0px;
+	  height: 15%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+  }
+
+  .message h2, p{
+    padding: 0px 0px 0px 5px;
+    
+  }
+
+/*Style of the Events page image slider*/
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body, figure { 
+  margin: 0;
+  font-family: Istok Web, sans-serif;
+  font-weight: 100;
+}
+div#captioned-gallery { 
+  	width: 70%; 
+	margin-left: 12%;
+	overflow: hidden; 
+}
+figure.slider { 
+  position: relative; width: 500%;
+  font-size: 0; animation: 30s slidy infinite; 
+}
+figure.slider figure { 
+  width: 20%; height: auto;
+  display: inline-block;  position: inherit; 
+}
+figure.slider img { width: 100%; height: 50%; }
+figure.slider figure figcaption { 
+  position: absolute; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  color: #fff; width: 100%;
+  font-size: 2rem; padding: .6rem; 
+}
+/* Style of the Events page slider end*/
+
+
+  .message img{
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    position: relative;
+    top: -100px;
+    box-shadow: 5px 5px 5px grey;
+  }
+
+  /* This is the style of the footer div*/
+  footer {
+    background-color: rgb(143, 142, 142);
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .btotop{
+    background-color: #111;
+    padding: 10px;
+  }
+.column {
+  float: left;
+  width: 30%;
+  padding: 5px;
+  border-right: 5px solid blue;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+#Coe{
+	text-align: center;
+}
+
+	.event{
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(65, 15, 247);
+	text-align: center;
+  }
+	.upcom{
+    background-color: blue;
+    border: 4px solid rgb(39, 230, 230);
+    margin: 2px;
+	width: 45%;
+	height: 15em;
+	border-radius: 2em;
+  color: white;
+    font-size: 20px;
+  }
+
+.pasev{
+    background-color: blue;
+    border: 4px solid rgb(39, 230, 230);
+    margin: 2px;
+	width: 45%;
+	height: 15em;
+	border-radius: 2em;
+  color: white;
+    font-size: 20px;
+  }
+
+.memo{
+	background-color: rgba(39, 230, 230, 0.555);
+  margin: 5% 0 0 25%;
+  border: 4px solid blue;
+  width: 50%;
+  border-radius: 5px;
+}
+#mem{
+	text-align: center;
+	color: blue;
+}
+
+/* Style of the Students Portal page Starts */
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=number] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #4db8ff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+/* login form end */
+
+.studentform{
+  display: flex;
+  justify-content: space-evenly;
+  color: rgb(65, 15, 247);
+	text-align: center;
+  margin-bottom: 25px;
+}
+
+.signup{
+  background-color: blue;
+  border: 4px solid rgb(39, 230, 230);
+	width: 45%;
+	border-radius: 2em;
+  color: white;
+  font-size: 20px;
+}
+
+.signin{
+  background-color: blue;
+  border: 4px solid rgb(39, 230, 230);
+	width: 45%;
+	border-radius: 2em;
+  color: white;
+  font-size: 20px;
+}
+
+.button2 {
+  background-color: #4db8ff;;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 8%;
+  opacity: 0.9;
+  border-radius: 10%;
+}
+.button2 a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f06157;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 38%;
+}
+
+/* Add padding to container elements */
+.containerf {
+  padding: 16px;
+  border-width: 0ch;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style of the students portal ends */
+
+/* Style of the Staff page Begins */
+.staff{
+  display: flex;
+    height: auto;
+    justify-content: space-evenly;
+    /* margin: 20px 0px 0px 0px; */
+    overflow-y: hidden;
+    margin-bottom: 2.5rem;
+}
+
+.columnstaf, .columnstaf1 {
+  display: flex;
+  float: left;
+  width: 20%;
+  margin-bottom: 16px; 
+  padding: 0 8px;
+  background-color: aqua;
+}
+
+.cardstaf {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.imgstaf{
+  width: 25%;
+  height: auto;
+}
+
+.stafh{
+  text-align: center;
+  color: aqua;
+  background-color: black;
+  margin: auto;
+  width: 25%;
+  border: 3px solid blue;
+  padding: 10px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.containerstaf::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.titlestaf {
+  color: grey;
+}
+
+.buttonstaf {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 90%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+/* Style of the Staff page Ends */
+
+/* Style of the about page starts */
+#contact input[type="text"], #contact input[type="email"],
+ #contact input[type="tel"], #contact input[type="url"],
+  #contact textarea, #contact button[type="submit"] 
+  { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	padding:25px;
+	margin:5px 0;
+}
+
+#contact h3 {
+	color: #0CF;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	/* min-width: 100%; */
+	padding: 0;
+	/* width: 100%; */
+}
+
+#contact input[type="text"],
+ #contact input[type="email"], 
+ #contact input[type="tel"], #contact input[type="url"],
+  #contact textarea {
+	width:90%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, 
+#contact input[type="email"]:hover, #contact input[type="tel"]:hover,
+ #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:90%;
+	border:none;
+	background:#0CF;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:#09C;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+/* Style of the about page ends */
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width : 881px ){
+   h1{
+     Font-size: 1.7em;
+  }
+  body {
+        overflow-x: hidden !important;
+    }
+  .flex-container, .message {
+    flex-direction: column;
+    word-wrap: break-word;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .card >h2 {
+    color: black;
+    font-size: 0.5em;
+   }
+
+   .memo{
+    margin: 5% 0 0 7%;
+    width: 85%;
+  }
+  .message img{
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    position: relative;
+    top: -50px;
+  }
+  /* .message {
+    background-color: #51c7eb;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
+    border-top-left-radius: 5%;
+  } */
+
+  .message, .staff{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  justify-content: middle;
+	text-align: center;
+  }
+
+  .content1, .content2, .columnstaf{
+    width: 45%;
+    margin-top: 55px;
+  }
+	
+	.event{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    justify-content: middle;
+	text-align: center;
+  }
+	
+	.pasev, .upcom{
+		width: 50;
+	}
+
+
+  .studentform{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .signin, .signup{
+    width: 85%;
+    margin-top: 20px;
+  }
+	
+	.cancelbtn, .signupbtn {
+    width: 90%;
+  }
+  .staff{
+      display: flex;
+      height: auto;
+      flex-direction: row;
+      justify-content: space-evenly;
+      overflow-y: hidden;
+      /* margin-bottom: 2.5rem; */
+  }
+
+  /* .columnstaf {
+    width: 50%;
+    display: block;
+  } */
+}
+
+
+ /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 390px) {
+    .text {font-size: 11px}
+	  .event{
+		  flex-direction: column;
+	  }
+	  .pasev, .upcom{
+		width: 100%;
+	}
+
+  .studentform {
+    flex-direction: column;
+}
+
+  .signin, .signup {
+  width: 90%;
+  margin: 20px 10px 0px 10px;
+}
+
+.cancelbtn, .signupbtn {
+  width: 80%;
+}
+
+  .memo{
+    margin: 5% 0 0 7%;
+    width: 80%;
+  }
+  .column {
+    width: 100%;
+  }
+
+  .message, .staff{
+    flex-direction: column;
+  }
+
+  .content1, .content2{
+    width: 100%;
+  }
+  .columnstaf{
+    width: 95%;
+  }
+
+
+  /* header{
+    display: block;
+    clear: both;
+    content: "";
+  }
+  .headert{
+  float: none;
+  clear: both;
+}
+
+.headerlogo{
+float: left;
+clear: both;
+} */
+  
+}
